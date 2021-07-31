@@ -1,40 +1,23 @@
-<button class="btn btn-success" onclick="add_top()">Add</button>
-
-menu_list_array = ["Veg Margherita Pizza",
-                   "Chicken Tandoori Pizza",
-                   "Veg Supreme Pizza",
-                   "Panner Tika Pizza",
-                   "Deluxe Veggie Pizza",
-                   "Veg Extravaganza Pizza"
-                    ];
-
-function getmenu(){
-var htmldata;
-htmldata="<ol class='menulist'>"
-menu_list_array.sort();
-for(var i=0; i=menu_list_array.length;i++)
-    htmldata=htmldata+'<li>' + menu_list_array[i] + '</li>'
-}
-htmldata=htmldata+"</ol>"
-document.getElementById("display_addmenu").innerHTML=htmldata;
-
-
-function add_item(){
-var htmldata;
-var item=document.getElementById("add_item").value;
-menu_list_array.sort();
-htmldata="<section class='cards'>"
-for(var i=0;i<menu_list_array.length;i++)
-     htmldata=htmldata+'<div class="card">'
-     +'<img src="images/pizzaImg.png"/>'
-     +menu_list_array[i] + '</div>'
-
-}
-htmldata=htmldata+"</section>"
-document.getElementById("display_addmenu").innerHTML=htmldata;
-
-function add_top(){
-var item=document.getElementById("add_item").value;
-menu_list_array.push(item);
-add_item();
-}
+function addUser() {
+    player1_name=document.getElementById ("player1_name_input").Value;
+    player2_name=document.getElementById ("player2_name_input").Value;
+    localStorage.setItem("player1_name",player1_name);
+    localStorage.setItem("player2_name",player2_name);
+    window.location="game_page.html";
+    }
+    
+    question_turn = player1
+    answer_turn = player2
+    
+    function check()
+    
+    get_answer = document.getElementById("input_check_box")
+    if(get_answer == actual_answer)
+      {
+       update_player1_score = player1_score +1;
+        document.getElementById("player1_score")
+      }
+    else
+      {
+        update_player2_score = player1_score +1;
+      }
