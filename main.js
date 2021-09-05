@@ -1,9 +1,14 @@
-function addUser(){
-    player1_name = document.getElementById("player1_name_input").value;
-    player2_name = document.getElementById("player2_name_input").value;
+var canvas = new fabric.Canvas('myCanvas');
+ var x= document.getElementById("myAudio");
 
-    localStorage.setItem("player1_name",player1_name);
-    localStorage.setItem("player2_name",player2_name);
+function new_image()
+{fabric.Image.fromURL('', function(Img) { block_image_object = Img;
+	block_image_object.scaleToWidth(700); block_image_object.scaleToHeight(510); block_image_object.set({ top:0, left:0 }); canvas.add(block_image_object); });
 
-    window.location = "game_page.html";
+
+	
+}
+
+function playSound(){
+	Defaulter_1.play();
 }
